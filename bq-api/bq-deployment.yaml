@@ -12,5 +12,16 @@ spec:
       containers:
       - name: bqapi
         image: docker.io/mvangala/synergist_bigquery_api:dev
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /etc/bq/bq.json
         ports:
         - containerPort: 8080
+        volumeMounts: 
+        - name: bq-secret
+          mountPath: "/etc/bq"
+          readOnly: true
+      volumes:
+      - name: bq-secret
+        secret:
+          secretName: bq-creds
