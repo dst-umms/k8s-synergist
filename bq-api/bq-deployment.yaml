@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: synergist-bq-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bqapi
+    spec:
+      containers:
+      - name: bqapi
+        image: docker.io/mvangala/synergist_bigquery_api:dev
+        ports:
+        - containerPort: 8080
