@@ -13,4 +13,4 @@ spec:
       - name: demo
         image: docker.io/mvangala/k8s_demo:v1
         ports:
-        - containerPort: 8000
+        - containerPort: 80
