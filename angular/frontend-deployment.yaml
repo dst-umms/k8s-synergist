@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: client
-        image: docker.io/mvangala/synergist_angular_client:dev
+        image: gcr.io/synergist-170903/synergist_angular_client:dev
         ports:
-        - containerPort: 3000
+        - containerPort: 80

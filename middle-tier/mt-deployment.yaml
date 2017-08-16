@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: docker.io/umasskapelletier/synergist_webapi:latest
+        image: gcr.io/synergist-170903/synergist_web_api:dev
         ports:
         - containerPort: 5000

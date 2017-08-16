@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: bqapi
-        image: docker.io/mvangala/synergist_bigquery_api:dev
+        image: gcr.io/synergist-170903/synergist_bigquery_api:dev
         env:
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: /etc/bq/bq.json
@@ -24,4 +24,4 @@ spec:
       volumes:
       - name: bq-secret
         secret:
-          secretName: bq-creds
+          secretName: synergist-dev-key
